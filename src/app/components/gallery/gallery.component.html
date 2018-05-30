@@ -1,0 +1,5 @@
+<section class="gallery">
+  <figure *ngFor="let img of images" class="gallery__img-container">
+    <img [src]="img.src" [alt]="img.description" class="gallery__img">
+  </figure>
+</section>

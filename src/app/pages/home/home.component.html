@@ -1,0 +1,11 @@
+<section class="home-content">
+  <div class="home-content__main">
+    <img [src]="mainImg.src" [alt]="mainImg.description" class="home-content__main-image" />
+  </div>
+  <div class="home-content__secundary">
+    <figure *ngFor="let img of images" class="home-content__secundary-image-box">
+      <img [src]="img.src" [alt]="img.description" class="home-content__secundary-image" [ngClass]="[img.classAnimation]" />
+      <figcaption class="home-content__image-description">{{ img.description }}</figcaption>
+    </figure>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+@import './../../../assets/variables.scss';
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+    grid-gap: 1em;
+    padding: 2em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: $home-secundary-color;
+    &__img-container {
+        margin: 0;
+        &:first-child img {
+            -webkit-filter: blur(10px);
+            filter: blur(10px);
+        }
+        &:nth-child(3) img {
+            -webkit-filter: sepia(90%);
+            filter: sepia(90%);
+        }
+        &:nth-child(2) img,
+        &:nth-child(4) img,
+        &:nth-child(6) img {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+    }
+    &__img {
+        width: 100%;
+        -webkit-box-shadow: $default-box-shadow;
+        box-shadow: $default-box-shadow;
+    }
+}
